@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Outfit', sans-serif;
@@ -8,6 +12,16 @@ body {
 header {
   text-align: center;
   padding: 2em 1em;
+  transition: all 0.3s ease;
+}
+
+header.shrink {
+  padding: 1em 1em;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 nav {
@@ -15,6 +29,7 @@ nav {
   justify-content: center;
   gap: 1.8em;
   margin-top: 1em;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -25,6 +40,14 @@ nav a {
 
 nav a:hover {
   color: #fff;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  margin-top: 1em;
+  cursor: pointer;
+  color: #e1306c;
 }
 
 .section {
@@ -95,10 +118,23 @@ footer {
   color: #aaa;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   nav {
     flex-direction: column;
-    gap: 1em;
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
   }
 
   .profile-img {
@@ -112,5 +148,17 @@ footer {
 
   h2 {
     font-size: 20px;
+  }
+
+  .card {
+    padding: 1.2em;
+  }
+
+  .section {
+    padding: 1em;
+  }
+
+  p, li {
+    font-size: 14px;
   }
 }
