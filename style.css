@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 2em 1em;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.8em;
+  margin-top: 1em;
+}
+
+nav a {
+  color: #e1306c;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+.section {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 1.5em;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px;
+  padding: 2em;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #e1306c;
+  object-fit: cover;
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
+
+h2 {
+  color: #e1306c;
+  font-size: 1.5em;
+  margin-bottom: 0.8em;
+}
+
+p, li {
+  color: #ddd;
+  font-size: 15px;
+}
+
+ul {
+  padding-left: 1.2em;
+}
+
+.btn {
+  background-color: #e1306c;
+  color: white;
+  padding: 0.6em 1.4em;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 1em;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #c42b5c;
+}
+
+.btn i {
+  margin-right: 6px;
+}
+
+footer {
+  text-align: center;
+  padding: 2em 1em;
+  font-size: 14px;
+  color: #aaa;
+}
+
+@media (max-width: 500px) {
+  nav {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
